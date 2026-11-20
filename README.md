@@ -26,3 +26,4 @@ docker buildx build --platform linux/amd64,linux/arm64 \
 - `requirements.txt` — зависимости (Django 4.2.16, Gunicorn 22.0.0)
 - `config/` — настройки Django-проекта
 - `core/` — приложение с первой страницей (`core/templates/core/index.html`)
+<!-- lab1 -->
