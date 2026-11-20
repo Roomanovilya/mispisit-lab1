@@ -1,0 +1,32 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<h1>Создание заявки</h1>
+
+{% if error %}
+    <div class="error">
+        <strong>Ошибка!</strong> {{ error }}
+    </div>
+{% endif %}
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label>Тема заявки:</label>
+        <input type="text" name="title" placeholder="Например: Не работает мышь">
+    </div>
+    <div class="form-group">
+        <label>Описание проблемы:</label>
+        <textarea name="description" rows="4"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Приоритет:</label>
+        <select name="priority">
+            <option value="Обычный">Обычный</option>
+            <option value="Высокий">Высокий</option>
+            <option value="Критический">Критический</option>
+        </select>
+    </div>
+    <button type="submit" class="btn">Создать заявку</button>
+</form>
+{% endblock %}
