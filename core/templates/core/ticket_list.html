@@ -1,0 +1,29 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<h1>Список заявок</h1>
+<a href="/tickets/new" class="btn">+ Создать новую заявку</a>
+
+{% if tickets %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Тема</th>
+            <th>Приоритет</th>
+            <th>Статус</th>
+            <th></th>
+        </tr>
+        {% for t in tickets %}
+        <tr>
+            <td>{{ t.id }}</td>
+            <td>{{ t.title }}</td>
+            <td>{{ t.priority }}</td>
+            <td>{{ t.status }}</td>
+            <td><a href="/tickets/{{ t.id }}">Открыть</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>Пока нет ни одной заявки. Создайте первую!</p>
+{% endif %}
+{% endblock %}

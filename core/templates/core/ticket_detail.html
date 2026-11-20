@@ -1,0 +1,11 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<h1>Заявка №{{ ticket.id }}</h1>
+<p><strong>Тема:</strong> {{ ticket.title }}</p>
+<p><strong>Описание:</strong> {{ ticket.description|default:"Не указано" }}</p>
+<p><strong>Приоритет:</strong> {{ ticket.priority }}</p>
+<p><strong>Статус:</strong> {{ ticket.status }}</p>
+
+<a href="/tickets" style="display: inline-block; margin-top: 1rem;">← Назад к списку</a>
+{% endblock %}

@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Computer Helper</title>
-    <style>
-        .ver { color: #555; }
-        .status { color: #2e7d32; font-weight: 600; }
-    </style>
-</head>
-<body>
-    <h1>Computer Helper</h1>
-    <p>Система удалённой технической поддержки</p>
-    <p class="ver">Версия 0.0.1</p>
-    <p class="status">Разработка продолжается</p>
-</body>
-</html>
+{% extends "core/base.html" %}
+
+{% block content %}
+<h1>Computer Helper</h1>
+<p>Система удалённой технической поддержки</p>
+<p><strong>Версия 0.0.2</strong></p>
+<p style="color: #2e7d32; font-weight: bold;">Разработка продолжается</p>
+<p>Выберите действие в меню сверху, чтобы начать работу.</p>
+{% endblock %}
